@@ -34,7 +34,7 @@ public class ByIngredientFragment extends Fragment {
         binding = FragmentByingredientBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        String[] effectNameList = getResources().getStringArray(R.array.effectNames);
+        String[] effectNameList = getResources().getStringArray(R.array.ingredientNames);
         ArrayAdapter adapter = new ArrayAdapter<String>(this.getContext(),
                 android.R.layout.simple_list_item_1, android.R.id.text1,
                 effectNameList);
