@@ -1,11 +1,11 @@
 package com.psyrian.skyrimalchemybuilder;
 
-public class Effect {
+public class cEffect {
     private String name;
     private float modValue;
     private float modMagnitude;
 
-    public Effect(String name, float modValue, float modMagnitude) {
+    public cEffect(String name, float modValue, float modMagnitude) {
         this.name = name;
         this.modValue = modValue;
         this.modMagnitude = modMagnitude;

@@ -1,15 +1,9 @@
 package com.psyrian.skyrimalchemybuilder;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
-import android.widget.ListView;
-import android.widget.TextView;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -32,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-    public List<Ingredient> ingredientList;
+    public List<cIngredient> ingredientList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ingredientList = new ArrayList<Ingredient>();
+        ingredientList = new ArrayList<cIngredient>();
         this.initializeIngredients();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -85,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject row = jsonArray.getJSONObject(i);
 
-                Effect[] newEffects = new Effect[4];
+                cEffect[] newEffects = new cEffect[4];
                 String ingName = row.getString("name");
                 int ingID = row.getInt("id");
 
@@ -96,12 +90,12 @@ public class MainActivity extends AppCompatActivity {
                     String effName = jsonEffect.getString("name");
                     float effVal = (float)jsonEffect.getDouble("modValue");
                     float effMag = (float)jsonEffect.getDouble("modMagnitude");
-                    Effect curEffect = new Effect(effName, effVal, effMag);
+                    cEffect curEffect = new cEffect(effName, effVal, effMag);
 
                     newEffects[j-1] = curEffect;
                 }
 
-                Ingredient curIngredient = new Ingredient(ingName, ingID, newEffects);
+                cIngredient curIngredient = new cIngredient(ingName, ingID, newEffects);
                 ingredientList.add(curIngredient);
                 int b = 0;
             }
