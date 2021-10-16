@@ -1,0 +1,51 @@
+  [{
+      "name": "name_abeceanLongfin",
+      "id": "1",
+
+      "effect1": {
+          "name": "effect_weaknessToFrost",
+          "modMagnitude": "1",
+          "modValue": "2"
+      },
+      "effect2": {
+          "name": "effect_fortifySneak",
+          "modMagnitude": "3",
+          "modValue": "4"
+      },
+      "effect3": {
+          "name": "effect_weaknessToPoison",
+          "modMagnitude": "5",
+          "modValue": "6"
+      },
+      "effect4": {
+          "name": "effect_fortifyRestoration",
+          "modMagnitude": "7",
+          "modValue": "8"
+      }
+  },
+  {
+    "name": "ancestorMothWing",
+    "id": "2",
+    "effect1":
+      {
+        "name": "effect_damageStamina",
+        "modMagnitude": "9",
+        "modValue": "10"
+      },
+    "effect2": {
+      "name": "effect_fortifyConjuration",
+      "modMagnitude": "11",
+      "modValue": "12"
+    },
+    "effect3": {
+        "name": "effect_damageMagickaRegen",
+        "modMagnitude": "13",
+        "modValue": "14"
+    },
+    "effect4": {
+        "name": "effect_fortifyEnchanting",
+        "modMagnitude": "15",
+        "modValue": "16"
+    }
+  }
+  ]
