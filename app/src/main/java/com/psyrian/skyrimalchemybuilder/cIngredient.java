@@ -31,7 +31,7 @@ public class cIngredient {
      * @return = list of index values in parameter ingredient's effect list which match with
      */
     public List<List<Integer>> compareEffects(cIngredient compIngredient){
-        List<List<Integer>> matches = new ArrayList();
+        List<List<Integer>> matches = new ArrayList<>();
 
         // Double for loop to compare each base ingredient's effect to each of target ingredient's effects
         for(int i = 0; i <= 3; i++){
