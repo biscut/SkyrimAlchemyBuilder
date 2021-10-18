@@ -5,7 +5,6 @@ import java.util.List;
 
 public class cIngredient
 {
-
     private String name;
     private List<cEffect> effects;
 

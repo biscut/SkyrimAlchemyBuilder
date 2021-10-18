@@ -1,4 +1,4 @@
-package com.psyrian.skyrimalchemybuilder.ui.byIngredient;
+package com.psyrian.skyrimalchemybuilder;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -16,7 +16,10 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.psyrian.skyrimalchemybuilder.R;
+import com.psyrian.skyrimalchemybuilder.cIngredient;
 import com.psyrian.skyrimalchemybuilder.databinding.FragmentByingredientBinding;
+import com.psyrian.skyrimalchemybuilder.ui.byIngredient.ByIngredientViewModel;
+import com.psyrian.skyrimalchemybuilder.ui.byIngredient.cIngredientAdapter;
 
 public class ByIngredientFragment extends Fragment {
 
@@ -34,10 +37,13 @@ public class ByIngredientFragment extends Fragment {
         binding = FragmentByingredientBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        String[] effectNameList = getResources().getStringArray(R.array.ingredientNames);
-        ArrayAdapter adapter = new ArrayAdapter<String>(this.getContext(),
-                android.R.layout.simple_list_item_1, android.R.id.text1,
-                effectNameList);
+        String[] ingredientNameList = getResources().getStringArray(R.array.ingredientNames);
+        //ArrayAdapter adapter = new ArrayAdapter<String>(this.getContext(),
+        //        android.R.layout.simple_list_item_1, android.R.id.text1,
+        //        effectNameList);
+        MainActivity mainActivity = (MainActivity)getActivity();
+        cIngredientAdapter adapter = new cIngredientAdapter(this.getContext(), mainActivity.ingredientList);
+
         listView = (ListView)root.findViewById(R.id.ingredientListView);
         listView.setAdapter(adapter);
 
