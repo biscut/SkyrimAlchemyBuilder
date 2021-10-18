@@ -16,7 +16,7 @@ public class cPotion {
     public cPotion(List<cIngredient> newIngredients){
         boolean isSuccessful = true;
 
-        for(int i = 0; isSuccessful && i < ingredients.size(); i++)
+        for(int i = 0; isSuccessful && i < newIngredients.size(); i++)
             isSuccessful = this.addIngredient(newIngredients.get(i));
 
         if(!isSuccessful)
@@ -55,12 +55,12 @@ public class cPotion {
      * of effect per potion
      * @return returns list of effects created by this potion
      */
-    public List<cEffect> getEffects(){
-        List<cEffect> effects = new ArrayList<>();
+    public List<String> getEffects(){
+        List<String> effects = new ArrayList<>();
 
         for(int i = 0; i+1 < ingredients.size(); i++)
         {
-            for(int j = 1; j <= ingredients.size(); j++)
+            for(int j = i+1; j+1 <= ingredients.size(); j++)
             {
                 cEffect[] first = ingredients.get(i).getEffects();
                 cEffect[] second = ingredients.get(j).getEffects();
@@ -68,11 +68,9 @@ public class cPotion {
                 {
                     for(int l = 0; l < 4; l++)
                     {
-                        if(first[k].getName() == second[l].getName() && !effects.contains(first[k].getName())){
-                            if(first[k].getModMagnitude() >= second[l].getModMagnitude())
-                                effects.add(first[k]);
-                            else
-                                effects.add(second[l]);
+                        if(first[k].getName().equals(second[l].getName()) && !effects.contains(first[k].getName()))
+                        {
+                            effects.add(first[k].getName());
                         }
                     }
                 }

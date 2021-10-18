@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ingredientList = new ArrayList<cIngredient>();
         this.initializeIngredients();
+        this.testPotion(ingredientList);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -50,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+    }
+
+    private void testPotion(List<cIngredient> ingredients) {
+        cPotion test = new cPotion(ingredients);
+        List<String> testEffects = test.getEffects();
+        int a = 1;
     }
 
     public String loadJSONFromAsset(Context context) {
@@ -81,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
                 cEffect[] newEffects = new cEffect[4];
                 String ingName = row.getString("name");
-                int ingID = row.getInt("id");
 
                 for(int j = 1; j <= 4; j++)
                 {
@@ -95,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     newEffects[j-1] = curEffect;
                 }
 
-                cIngredient curIngredient = new cIngredient(ingName, ingID, newEffects);
+                cIngredient curIngredient = new cIngredient(ingName, newEffects);
                 ingredientList.add(curIngredient);
                 int b = 0;
             }

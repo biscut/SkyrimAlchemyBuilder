@@ -1,51 +1,192 @@
   [{
       "name": "name_abeceanLongfin",
-      "id": "1",
-
       "effect1": {
           "name": "effect_weaknessToFrost",
           "modMagnitude": "1",
-          "modValue": "2"
+          "modValue": "1"
       },
       "effect2": {
           "name": "effect_fortifySneak",
-          "modMagnitude": "3",
-          "modValue": "4"
+          "modMagnitude": "1",
+          "modValue": "1"
       },
       "effect3": {
           "name": "effect_weaknessToPoison",
-          "modMagnitude": "5",
-          "modValue": "6"
+          "modMagnitude": "1",
+          "modValue": "1"
       },
       "effect4": {
           "name": "effect_fortifyRestoration",
-          "modMagnitude": "7",
-          "modValue": "8"
+          "modMagnitude": "1",
+          "modValue": "1"
       }
-  },
-  {
-    "name": "ancestorMothWing",
-    "id": "2",
-    "effect1":
+    },
+    {
+      "name": "ancestorMothWing",
+      "effect1":
+        {
+          "name": "effect_damageStamina",
+          "modMagnitude": "1",
+          "modValue": "1"
+        },
+      "effect2": {
+        "name": "effect_fortifyConjuration",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+          "name": "effect_damageMagickaRegen",
+          "modMagnitude": "1",
+          "modValue": "1"
+      },
+      "effect4": {
+          "name": "effect_fortifyEnchanting",
+          "modMagnitude": "1",
+          "modValue": "1"
+      }
+    },
+    {
+      "name": "bearClaws",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "0.8",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyOnehanded",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_damageMagickaRegen",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "bee",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_ravageStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_regenerateStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_weaknessToShock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "beehiveHusk",
+      "effect1":
+      {
+        "name": "effect_resistPoison",
+        "modMagnitude": "0.5",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyLightArmor",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifySneak",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyDestruction",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "bleedingCrown",
+      "effect1":
+      {
+        "name": "effect_weaknessToFire",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyBlock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_weaknessToPoison",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_resistMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "blisterWort",
+      "effect1":
       {
         "name": "effect_damageStamina",
-        "modMagnitude": "9",
-        "modValue": "10"
+        "modMagnitude": "1",
+        "modValue": "1"
       },
-    "effect2": {
-      "name": "effect_fortifyConjuration",
-      "modMagnitude": "11",
-      "modValue": "12"
+      "effect2": {
+        "name": "effect_frenzy",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_restoreHealth",
+        "modMagnitude": "0.6",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifySmithing",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
     },
-    "effect3": {
+    {
+      "name": "blueMountainFlower",
+      "effect1":
+      {
+        "name": "effect_restoreHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyConjuration",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
         "name": "effect_damageMagickaRegen",
-        "modMagnitude": "13",
-        "modValue": "14"
-    },
-    "effect4": {
-        "name": "effect_fortifyEnchanting",
-        "modMagnitude": "15",
-        "modValue": "16"
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
     }
-  }
   ]

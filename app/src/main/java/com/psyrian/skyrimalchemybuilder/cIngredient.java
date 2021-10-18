@@ -6,23 +6,19 @@ import java.util.List;
 public class cIngredient {
 
     private String name;
-    private int id;
     private cEffect[] effects;
 
     /**
      * @param name = name of ingredient
-     * @param id = id of ingredient
      * @param effects = array of effects
      */
-    public cIngredient(String name, int id, cEffect[] effects) {
+    public cIngredient(String name, cEffect[] effects) {
         this.name = name;
-        this.id = id;
         this.effects = effects;
     }
 
     // Getters for values; no setters as values should stay static
     public String getName() { return name; }
-    public int getId() { return id; }
     public cEffect[] getEffects() { return effects; }
 
 

@@ -144,7 +144,7 @@
         <item name="effect_fortifyLockpicking">Fortify Lockpicking</item>
         <item name="effect_fortifyMagicka">Fortify Magicka</item>
         <item name="effect_fortifyMarksman">Fortify Marksman</item>
-        <item name="effect_fortifyOneHanded">Fortify One-handed</item>
+        <item name="effect_fortifyOnehanded">Fortify One-handed</item>
         <item name="effect_fortifyPickpocket">Fortify Pickpocket</item>
         <item name="effect_fortifyRestoration">Fortify Restoration</item>
         <item name="effect_fortifySmithing">Fortify Smithing</item>
