@@ -22,14 +22,16 @@ import java.util.List;
 
 import org.json.*;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     public List<cIngredient> ingredientList;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         ingredientList = new ArrayList<cIngredient>();
         this.initializeIngredients();
@@ -53,13 +55,15 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
-    private void testPotion(List<cIngredient> ingredients) {
+    private void testPotion(List<cIngredient> ingredients)
+    {
         cPotion test = new cPotion(ingredients);
         List<String> testEffects = test.getEffects();
         int a = 1;
     }
 
-    public String loadJSONFromAsset(Context context) {
+    public String loadJSONFromAsset(Context context)
+    {
         String json = null;
         try {
             InputStream is = context.getAssets().open("ingredients.json");
@@ -75,7 +79,8 @@ public class MainActivity extends AppCompatActivity {
         return json;
     }
 
-    private void initializeIngredients() {
+    private void initializeIngredients()
+    {
         //TypedArray test = getResources().obtainTypedArray(R.array.ingredients);
         //getResources();
         String jsonData = loadJSONFromAsset(this);
@@ -83,10 +88,11 @@ public class MainActivity extends AppCompatActivity {
         try {
             JSONArray jsonArray = new JSONArray(jsonData);
 
-            for (int i = 0; i < jsonArray.length(); i++) {
+            for (int i = 0; i < jsonArray.length(); i++)
+            {
                 JSONObject row = jsonArray.getJSONObject(i);
 
-                cEffect[] newEffects = new cEffect[4];
+                List<cEffect> newEffects = new ArrayList();
                 String ingName = row.getString("name");
 
                 for(int j = 1; j <= 4; j++)
@@ -98,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     float effMag = (float)jsonEffect.getDouble("modMagnitude");
                     cEffect curEffect = new cEffect(effName, effVal, effMag);
 
-                    newEffects[j-1] = curEffect;
+                    newEffects.add(curEffect);
                 }
 
                 cIngredient curIngredient = new cIngredient(ingName, newEffects);
@@ -111,7 +117,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
 
@@ -119,7 +126,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onSupportNavigateUp() {
+    public boolean onSupportNavigateUp()
+    {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();

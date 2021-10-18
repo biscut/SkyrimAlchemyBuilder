@@ -3,37 +3,42 @@ package com.psyrian.skyrimalchemybuilder;
 import java.util.ArrayList;
 import java.util.List;
 
-public class cIngredient {
+public class cIngredient
+{
 
     private String name;
-    private cEffect[] effects;
+    private List<cEffect> effects;
 
     /**
      * @param name = name of ingredient
      * @param effects = array of effects
      */
-    public cIngredient(String name, cEffect[] effects) {
+    public cIngredient(String name, List<cEffect> effects)
+    {
         this.name = name;
         this.effects = effects;
     }
 
     // Getters for values; no setters as values should stay static
     public String getName() { return name; }
-    public cEffect[] getEffects() { return effects; }
+    public List<cEffect> getEffects() { return effects; }
 
 
     /**
      * @param compIngredient = ingredient to compare with this.ingredient
      * @return = list of index values in parameter ingredient's effect list which match with
      */
-    public List<List<Integer>> compareEffects(cIngredient compIngredient){
+    public List<List<Integer>> compareEffects(cIngredient compIngredient)
+    {
         List<List<Integer>> matches = new ArrayList<>();
 
         // Double for loop to compare each base ingredient's effect to each of target ingredient's effects
-        for(int i = 0; i <= 3; i++){
+        for(int i = 0; i <= 3; i++)
+        {
             List<Integer> curMatch = new ArrayList();
-            for(int j = 0; j <=3; j++) {
-                if (this.effects[i].getName() == compIngredient.effects[j].getName())
+            for(int j = 0; j <=3; j++)
+            {
+                if (this.effects.get(i).getName() == compIngredient.effects.get(j).getName())
                 {
                     curMatch.add(i);
                     curMatch.add(j);

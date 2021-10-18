@@ -3,7 +3,8 @@ package com.psyrian.skyrimalchemybuilder;
 import java.util.ArrayList;
 import java.util.List;
 
-public class cPotion {
+public class cPotion
+{
 
     private List<cIngredient> ingredients = new ArrayList();
 
@@ -13,7 +14,8 @@ public class cPotion {
      * @param newIngredients = ingredients to populate potion with
      * @return
      */
-    public cPotion(List<cIngredient> newIngredients){
+    public cPotion(List<cIngredient> newIngredients)
+    {
         boolean isSuccessful = true;
 
         for(int i = 0; isSuccessful && i < newIngredients.size(); i++)
@@ -23,11 +25,13 @@ public class cPotion {
             this.ingredients = new ArrayList();
     }
 
-    public List<cIngredient> getIngredients() {
+    public List<cIngredient> getIngredients()
+    {
         return ingredients;
     }
 
-    public void setIngredients(List<cIngredient> ingredients) {
+    public void setIngredients(List<cIngredient> ingredients)
+    {
         this.ingredients = ingredients;
     }
 
@@ -36,14 +40,18 @@ public class cPotion {
      * @param newIngredient = ingredient to be added to the potion
      * @return boolean to indicate
      */
-    public boolean addIngredient(cIngredient newIngredient){
+    public boolean addIngredient(cIngredient newIngredient)
+    {
         boolean isExisting = false;
 
-        for(int i = 0; !isExisting && i < ingredients.size(); i++){
-            if(ingredients.get(i).getId() == newIngredient.getId())
+        // Check whether ingredient already exists in potion
+        for(int i = 0; !isExisting && i < ingredients.size(); i++)
+        {
+            if(ingredients.get(i).getName().equals(newIngredient.getName()))
                 isExisting = true;
         }
 
+        // Adds ingredient if not already
         if(!isExisting)
             this.ingredients.add(newIngredient);
 
@@ -53,24 +61,28 @@ public class cPotion {
     /**
      * Crawls through ingredients looking for matches, one instance
      * of effect per potion
-     * @return returns list of effects created by this potion
+     * @return returns list of effect names created by this potion
      */
-    public List<String> getEffects(){
-        List<String> effects = new ArrayList<>();
+    public List<String> getEffects()
+    {
+        List<String> effects = new ArrayList<>(); // holds list of effect names to return
 
-        for(int i = 0; i+1 < ingredients.size(); i++)
+        // Loop all of the things to compare all of the things, progressing to not double compare
+        for(int i = 0; i+1 < ingredients.size(); i++) //Loop through first ingredient for compare
         {
-            for(int j = i+1; j+1 <= ingredients.size(); j++)
+            for(int j = i+1; j+1 <= ingredients.size(); j++) // Loop through second ingredient
             {
-                cEffect[] first = ingredients.get(i).getEffects();
-                cEffect[] second = ingredients.get(j).getEffects();
-                for(int k = 0; k < 4; k++)
+                // Get ingredients for readability later
+                List<cEffect> first = ingredients.get(i).getEffects();
+                List<cEffect> second = ingredients.get(j).getEffects();
+                for(int k = 0; k < 4; k++) // Loop through first ingredient's effects
                 {
-                    for(int l = 0; l < 4; l++)
+                    for(int l = 0; l < 4; l++) // Loop through second ingredients effects
                     {
-                        if(first[k].getName().equals(second[l].getName()) && !effects.contains(first[k].getName()))
+                        if(first.get(k).getName().equals(second.get(l).getName())
+                                && !effects.contains(first.get(k).getName()))
                         {
-                            effects.add(first[k].getName());
+                            effects.add(first.get(k).getName());
                         }
                     }
                 }
