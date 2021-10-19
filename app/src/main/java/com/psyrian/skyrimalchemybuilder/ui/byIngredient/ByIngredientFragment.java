@@ -1,4 +1,4 @@
-package com.psyrian.skyrimalchemybuilder;
+package com.psyrian.skyrimalchemybuilder.ui.byIngredient;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.psyrian.skyrimalchemybuilder.MainActivity;
 import com.psyrian.skyrimalchemybuilder.R;
 import com.psyrian.skyrimalchemybuilder.cIngredient;
 import com.psyrian.skyrimalchemybuilder.databinding.FragmentByingredientBinding;

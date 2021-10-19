@@ -81,8 +81,6 @@ public class MainActivity extends AppCompatActivity
 
     private void initializeIngredients()
     {
-        //TypedArray test = getResources().obtainTypedArray(R.array.ingredients);
-        //getResources();
         String jsonData = loadJSONFromAsset(this);
 
         try {

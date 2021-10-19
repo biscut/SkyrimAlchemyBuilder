@@ -2,6 +2,7 @@ package com.psyrian.skyrimalchemybuilder.ui.byIngredient;
 import com.psyrian.skyrimalchemybuilder.R;
 import com.psyrian.skyrimalchemybuilder.cIngredient;
 import android.content.Context;
+import android.content.res.Resources;
 import android.database.DataSetObserver;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,17 +55,26 @@ public class cIngredientAdapter implements ListAdapter
 	}
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		cIngredient subjectData=arrayList.get(position);
+		cIngredient ingredientData=arrayList.get(position);
 		if(convertView==null) {
 			LayoutInflater layoutInflater = LayoutInflater.from(context);
-			//convertView=layoutInflater.inflate(R.layout.list_row, null);
+			convertView=layoutInflater.inflate(R.layout.ingredient_item, null);
 			convertView.setOnClickListener(new View.OnClickListener(){
 					@Override
 					public void onClick(View v) {
 					}
 				});
-			TextView title=convertView.findViewById(R.id.title);
-			title.setText(subjectData.getName());
+
+			TextView curText=convertView.findViewById(R.id.item_name);
+			curText.setText(ingredientData.getName());
+			curText = convertView.findViewById(R.id.effect1);
+			curText.setText(ingredientData.getEffects().get(0).getName());
+			curText = convertView.findViewById(R.id.effect2);
+			curText.setText(ingredientData.getEffects().get(1).getName());
+			curText = convertView.findViewById(R.id.effect3);
+			curText.setText(ingredientData.getEffects().get(2).getName());
+			curText = convertView.findViewById(R.id.effect4);
+			curText.setText(ingredientData.getEffects().get(3).getName());
 		}
 
 		return convertView;
