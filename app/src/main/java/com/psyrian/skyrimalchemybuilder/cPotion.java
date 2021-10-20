@@ -59,6 +59,49 @@ public class cPotion
     }
 
     /**
+     * Function to search effects currently in potion for all possible matches
+     * @return List<String> containing all possible effects of potion
+     */
+    public List<String> getPossibleEffects()
+    {
+        List<String> possibleEffects = new ArrayList();
+
+        for(cIngredient curIngredient : this.ingredients)
+        {
+            for(cEffect curEffect : curIngredient.getEffects())
+            {
+                if(!possibleEffects.contains(curEffect.getName()))
+                    possibleEffects.add(curEffect.getName());
+            }
+        }
+
+        return possibleEffects;
+    }
+
+    /**
+     * Function to find all effects of current ingredients which do not currently have
+     * matches with other ingredients of potion
+     * @return List<String> containing effects possible to add with current ingredients
+     */
+    public List<String> getUnusedEffects()
+    {
+        List<String> potentialEffects = new ArrayList();
+        List<String> usedEffects = this.getEffects();
+
+        for(cIngredient curIngredient : this.ingredients)
+        {
+            for(cEffect curEffect : curIngredient.getEffects())
+            {
+                if(!potentialEffects.contains(curEffect.getName())
+                        && !usedEffects.contains(curEffect.getName()))
+                    potentialEffects.add(curEffect.getName());
+            }
+        }
+
+        return potentialEffects;
+    }
+
+    /**
      * Crawls through ingredients looking for matches, one instance
      * of effect per potion
      * @return returns list of effect names created by this potion
