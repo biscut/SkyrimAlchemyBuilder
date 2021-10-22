@@ -47,7 +47,7 @@
         android:textAlignment="center"
         android:layout_gravity="center|fill_horizontal"
         android:textSize="14sp"
-        android:background="#777777"
+        android:background="#333333"
         android:layout_columnWeight="1"/>
     <TextView
         android:id="@+id/effect4"
