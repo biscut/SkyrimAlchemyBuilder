@@ -28,6 +28,7 @@
         android:layout_gravity="center|fill_horizontal"
         android:textSize="14sp"
         android:background="#333333"
+        android:textColor="#808000"
         android:layout_columnWeight="1"/>
     <TextView
         android:id="@+id/effect2"
@@ -38,6 +39,7 @@
         android:layout_gravity="center|fill_horizontal"
         android:textSize="14sp"
         android:background="#333333"
+        android:textColor="#808000"
         android:layout_columnWeight="1"/>
 
     <TextView
@@ -48,6 +50,7 @@
         android:layout_gravity="center|fill_horizontal"
         android:textSize="14sp"
         android:background="#333333"
+        android:textColor="#808000"
         android:layout_columnWeight="1"/>
     <TextView
         android:id="@+id/effect4"
@@ -58,5 +61,6 @@
         android:layout_gravity="center|fill_horizontal"
         android:textSize="14sp"
         android:background="#333333"
+        android:textColor="#808000"
         android:layout_columnWeight="1"/>
 </GridLayout>
