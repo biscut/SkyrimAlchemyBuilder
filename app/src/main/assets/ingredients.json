@@ -1460,5 +1460,1157 @@
         "modMagnitude": "1",
         "modValue": "1"
       }
+    },
+    {
+      "name": "name_largeAntlers",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_slow",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_damageStaminaRegen",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_lavender",
+      "effect1":
+      {
+        "name": "effect_resistMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_ravageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyConjuration",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_lunaMothWing",
+      "effect1":
+      {
+        "name": "effect_damageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyLightArmor",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_regenerateHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_invisibility",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_moonSugar",
+      "effect1":
+      {
+        "name": "effect_weaknessToFire",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_resistFrost",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_restoreMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_regenerateMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_moraTapinella",
+      "effect1":
+      {
+        "name": "effect_restoreMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_lingeringDamageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_regenerateStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyIllusion",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_mudcrabChitin",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_cureDisease",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_resistPoison",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_resistFire",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_namirasRot",
+      "effect1":
+      {
+        "name": "effect_damageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyLockpicking",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fear",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_regenerateHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_netchJelly",
+      "effect1":
+      {
+        "name": "effect_paralysis",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyCarryWeight",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fear",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_nightshade",
+      "effect1":
+      {
+        "name": "effect_damageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_damageMagickaRegen",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_lingeringDamageStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyDestruction",
+        "modMagnitude": "0.8",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_nirnroot",
+      "effect1":
+      {
+        "name": "effect_damageHealth",
+        "modMagnitude": "1",
+        "modValue": "12.6"
+      },
+      "effect2": {
+        "name": "effect_damageStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_invisibility",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_resistMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_nordicBarnacle",
+      "effect1":
+      {
+        "name": "effect_damageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_waterbreathing",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_regenerateHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyPickpocket",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_orangeDartwing",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_ravageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyPickpocket",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_lingeringDamageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_pearl",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyBlock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_restoreMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_resistShock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_pineThrushEgg",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyLockpicking",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_weaknessToPoison",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_resistShock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_poisonBloom",
+      "effect1":
+      {
+        "name": "effect_damageHealth",
+        "modMagnitude": "1.5",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_slow",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyCarryWeight",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fear",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_powderedMammothTusk",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifySneak",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_weaknessToFire",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fear",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_purpleMountainFlower",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifySneak",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_lingeringDamageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_resistFrost",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_redMountainFlower",
+      "effect1":
+      {
+        "name": "effect_restoreMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_ravageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_damageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_riverBetty",
+      "effect1":
+      {
+        "name": "effect_damageHealth",
+        "modMagnitude": "2.5",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyAlteration",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_slow",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyCarryWeight",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_rockWarblerEgg",
+      "effect1":
+      {
+        "name": "effect_restoreHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyOnehanded",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_damageStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_weaknessToMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_sabreCatTooth",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyHeavyArmor",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifySmithing",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_weaknessToPoison",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_salmonRoe",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "0.4",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_waterbreathing",
+        "modMagnitude": "15.4",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyMagicka",
+        "modMagnitude": "12.5",
+        "modValue": "1.05"
+      },
+      "effect4": {
+        "name": "effect_regenerateMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_saltPile",
+      "effect1":
+      {
+        "name": "effect_weaknessToMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyRestoration",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_slow",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_regenerateMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_scalyPholiota",
+      "effect1":
+      {
+        "name": "effect_weaknessToMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyIllusion",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_regenerateStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyCarryWeight",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_scathecraw",
+      "effect1":
+      {
+        "name": "effect_ravageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_ravageStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_ravageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_lingeringDamageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_silversidePerch",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_damageStaminaRegen",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_ravageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_resistFrost",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_skeeverTail",
+      "effect1":
+      {
+        "name": "effect_damageStaminaRegen",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_ravageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_damageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyLightArmor",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_slaughterfishEgg",
+      "effect1":
+      {
+        "name": "effect_resistPoison",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyPickpocket",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_lingeringDamageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_slaughterfishScales",
+      "effect1":
+      {
+        "name": "effect_resistFrost",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_lingeringDamageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyHeavyArmor",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyBlock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_smallAntlers",
+      "effect1":
+      {
+        "name": "effect_weaknessToPoison",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyRestoration",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_lingeringDamageStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_damageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_smallPearl",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyOnehanded",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyRestoration",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_resistFrost",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_snowberries",
+      "effect1":
+      {
+        "name": "effect_resistFire",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyEnchanting",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_resistFrost",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_resistShock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_spawnAsh",
+      "effect1":
+      {
+        "name": "effect_ravageStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_resistFire",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyEnchanting",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_ravageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_spiderEgg",
+      "effect1":
+      {
+        "name": "effect_damageStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_damageMagickaRegen",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyLockpicking",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyMarksman",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_sprigganSap",
+      "effect1":
+      {
+        "name": "effect_damageMagickaRegen",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyEnchanting",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifySmithing",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyAlteration",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_swampFungalPod",
+      "effect1":
+      {
+        "name": "effect_resistShock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_lingeringDamageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_paralysis",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_restoreHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_taproot",
+      "effect1":
+      {
+        "name": "effect_weaknessToMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyIllusion",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_regenerateMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_restoreMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_thistleBranch",
+      "effect1":
+      {
+        "name": "effect_resistFrost",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_ravageStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_resistPoison",
+        "modMagnitude": "0.75",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyHeavyArmor",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_torchbugThorax",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_lingeringDamageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_weaknessToMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_tramaRoot",
+      "effect1":
+      {
+        "name": "effect_weaknessToShock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyCarryWeight",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_damageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_slow",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_trollFat",
+      "effect1":
+      {
+        "name": "effect_resistPoison",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyTwohanded",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_frenzy",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_damageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_tundraCotton",
+      "effect1":
+      {
+        "name": "effect_resistMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyBlock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyBarter",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_vampireDust",
+      "effect1":
+      {
+        "name": "effect_invisibility",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_restoreMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_regenerateHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_cureDisease",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_voidSalts",
+      "effect1":
+      {
+        "name": "effect_weaknessToShock",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_resistMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_damageHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_fortifyMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_wheat",
+      "effect1":
+      {
+        "name": "effect_restoreHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_damageStaminaRegen",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_lingeringDamageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_whiteCap",
+      "effect1":
+      {
+        "name": "effect_weaknessToFrost",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyHeavyArmor",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_restoreMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_ravageMagicka",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_wispWrappings",
+      "effect1":
+      {
+        "name": "effect_restoreStamina",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyDestruction",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyCarryWeight",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_resistMagic",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
+    },
+    {
+      "name": "name_yellowMountainFlower",
+      "effect1":
+      {
+        "name": "effect_resistPoison",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect2": {
+        "name": "effect_fortifyRestoration",
+        "modMagnitude": "1.25",
+        "modValue": "1"
+      },
+      "effect3": {
+        "name": "effect_fortifyHealth",
+        "modMagnitude": "1",
+        "modValue": "1"
+      },
+      "effect4": {
+        "name": "effect_damageStaminaRegen",
+        "modMagnitude": "1",
+        "modValue": "1"
+      }
     }
   ]

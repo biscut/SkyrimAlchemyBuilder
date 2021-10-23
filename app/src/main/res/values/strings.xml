@@ -86,11 +86,11 @@
     <string name="name_orangeDartwing">Orange Dartwing</string>
     <string name="name_pearl">Pearl</string>
     <string name="name_pineThrushEgg">Pine Thrush Egg</string>
-    <string name="name_poisonBlossom">Poison Blossom</string>
+    <string name="name_poisonBloom">Poison Bloom</string>
     <string name="name_powderedMammothTusk">Powdered Mammoth Tusk</string>
     <string name="name_purpleMountainFlower">Purple Mountain Flower</string>
     <string name="name_redMountainFlower">Red Mountain Flower</string>
-    <string name="name_riverbetty">River Betty</string>
+    <string name="name_riverBetty">River Betty</string>
     <string name="name_rockWarblerEgg">Rock Warbler Egg</string>
     <string name="name_sabreCatTooth">Sabre Cat Tooth</string>
     <string name="name_salmonRoe">Salmon Roe</string>
@@ -101,7 +101,7 @@
     <string name="name_skeeverTail">Skeever Tail</string>
     <string name="name_slaughterfishEgg">Slaughterfish Egg</string>
     <string name="name_slaughterfishScales">Slaughterfish Scales</string>
-    <string name="name_smallAntler">Small Antler</string>
+    <string name="name_smallAntlers">Small Antlers</string>
     <string name="name_smallPearl">Small Pearl</string>
     <string name="name_snowberries">Snowberries</string>
     <string name="name_spawnAsh">Spawn Ash</string>
@@ -118,6 +118,7 @@
     <string name="name_voidSalts">Void Salts</string>
     <string name="name_wheat">Wheat</string>
     <string name="name_whiteCap">White Cap</string>
+    <string name="name_wispWrappings">Wisp Wrappings</string>
     <string name="name_yellowMountainFlower">Yellow Mountain Flower</string>
 
     <string name="effect_cureDisease">Cure Disease</string>
