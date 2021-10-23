@@ -62,16 +62,16 @@ public class cPotion
      * Function to search effects currently in potion for all possible matches
      * @return List<String> containing all possible effects of potion
      */
-    public List<String> getPossibleEffects()
+    public List<Integer> getPossibleEffects()
     {
-        List<String> possibleEffects = new ArrayList();
+        List<Integer> possibleEffects = new ArrayList();
 
         for(cIngredient curIngredient : this.ingredients)
         {
             for(cEffect curEffect : curIngredient.getEffects())
             {
-                if(!possibleEffects.contains(curEffect.getName()))
-                    possibleEffects.add(curEffect.getName());
+                if(!possibleEffects.contains(curEffect.getID()))
+                    possibleEffects.add(curEffect.getID());
             }
         }
 
@@ -83,18 +83,18 @@ public class cPotion
      * matches with other ingredients of potion
      * @return List<String> containing effects possible to add with current ingredients
      */
-    public List<String> getUnusedEffects()
+    public List<Integer> getUnusedEffects()
     {
-        List<String> potentialEffects = new ArrayList();
-        List<String> usedEffects = this.getEffects();
+        List<Integer> potentialEffects = new ArrayList();
+        List<Integer> usedEffects = this.getEffects();
 
         for(cIngredient curIngredient : this.ingredients)
         {
             for(cEffect curEffect : curIngredient.getEffects())
             {
-                if(!potentialEffects.contains(curEffect.getName())
-                        && !usedEffects.contains(curEffect.getName()))
-                    potentialEffects.add(curEffect.getName());
+                if(!potentialEffects.contains(curEffect.getID())
+                        && !usedEffects.contains(curEffect.getID()))
+                    potentialEffects.add(curEffect.getID());
             }
         }
 
@@ -106,9 +106,9 @@ public class cPotion
      * of effect per potion
      * @return returns list of effect names created by this potion
      */
-    public List<String> getEffects()
+    public List<Integer> getEffects()
     {
-        List<String> effects = new ArrayList<>(); // holds list of effect names to return
+        List<Integer> effects = new ArrayList<>(); // holds list of effect names to return
 
         // Loop all of the things to compare all of the things, progressing to not double compare
         for(int i = 0; i+1 < ingredients.size(); i++) //Loop through first ingredient for compare
@@ -122,10 +122,10 @@ public class cPotion
                 {
                     for(int l = 0; l < 4; l++) // Loop through second ingredients effects
                     {
-                        if(first.get(k).getName().equals(second.get(l).getName())
-                                && !effects.contains(first.get(k).getName()))
+                        if(first.get(k).getID() == (second.get(l).getID())
+                                && !effects.contains(first.get(k).getID()))
                         {
-                            effects.add(first.get(k).getName());
+                            effects.add(first.get(k).getID());
                         }
                     }
                 }

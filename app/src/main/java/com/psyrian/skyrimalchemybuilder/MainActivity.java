@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity
     private void testPotion(List<cIngredient> ingredients)
     {
         cPotion test = new cPotion(ingredients);
-        List<String> testEffects = test.getEffects();
+        List<Integer> testEffects = test.getEffects();
         int a = 1;
     }
 
@@ -91,16 +91,21 @@ public class MainActivity extends AppCompatActivity
                 JSONObject row = jsonArray.getJSONObject(i);
 
                 List<cEffect> newEffects = new ArrayList();
-                String ingName = row.getString("name");
+                int ingNameID = getResources().getIdentifier(row.getString("name"), "string", getPackageName());
+                String ingName = getString(ingNameID);
+                int a = 0;
 
                 for(int j = 1; j <= 4; j++)
                 {
                     JSONObject jsonEffect = row.getJSONObject("effect"+ j);
 
-                    String effName = jsonEffect.getString("name");
+
+                    //String effName = jsonEffect.getString("name");
+                    int effID = getResources().getIdentifier(jsonEffect.getString("name"), "string", getPackageName());
+                    String effName = getResources().getString(effID);
                     float effVal = (float)jsonEffect.getDouble("modValue");
                     float effMag = (float)jsonEffect.getDouble("modMagnitude");
-                    cEffect curEffect = new cEffect(effName, effVal, effMag);
+                    cEffect curEffect = new cEffect(effID, effName, effVal, effMag);
 
                     newEffects.add(curEffect);
                 }

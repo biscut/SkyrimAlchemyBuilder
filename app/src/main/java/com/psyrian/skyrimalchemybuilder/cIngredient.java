@@ -37,7 +37,7 @@ public class cIngredient
             List<Integer> curMatch = new ArrayList();
             for(int j = 0; j <=3; j++)
             {
-                if (this.effects.get(i).getName() == compIngredient.effects.get(j).getName())
+                if (this.effects.get(i).getID() == compIngredient.effects.get(j).getID())
                 {
                     curMatch.add(i);
                     curMatch.add(j);

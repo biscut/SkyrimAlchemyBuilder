@@ -33,7 +33,8 @@ public class ByEffectFragment extends Fragment {
         binding = FragmentByeffectBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        String[] effectNameList = getResources().getStringArray(R.array.effectNames);
+        //String[] effectNameList = getResources().getStringArray(R.array.effectNames);
+        String[] effectNameList = {"test", "test1", "test2"};
         ArrayAdapter adapter = new ArrayAdapter<String>(this.getContext(),
                 android.R.layout.simple_list_item_1, android.R.id.text1,
                 effectNameList);
