@@ -6,9 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".ui.byIngredient.ByIngredientFragment">
 
+    <LinearLayout
+        android:id="@+id/addedIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="testing"
+            android:textColor="#000000" />
+
+
     <ListView
         android:id="@+id/ingredientListView"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/addedIngredients" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

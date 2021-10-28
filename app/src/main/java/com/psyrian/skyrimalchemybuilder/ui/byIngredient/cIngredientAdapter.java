@@ -6,6 +6,7 @@ import com.psyrian.skyrimalchemybuilder.cIngredient;
 import android.content.Context;
 import android.content.res.Resources;
 import android.database.DataSetObserver;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,9 +61,11 @@ public class cIngredientAdapter implements ListAdapter
 		if(convertView==null) {
 			LayoutInflater layoutInflater = LayoutInflater.from(context);
 			convertView=layoutInflater.inflate(R.layout.ingredient_item, null);
-			convertView.setOnClickListener(new View.OnClickListener(){
+			convertView.setOnLongClickListener(new View.OnLongClickListener(){
 					@Override
-					public void onClick(View v) {
+					public boolean onLongClick(View v) {
+						Log.i("ingViewLongClick",ingredientData.getName());
+						return false;
 					}
 				});
 
