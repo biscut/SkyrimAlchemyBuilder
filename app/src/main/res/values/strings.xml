@@ -151,9 +151,9 @@
     <string name="effect_fortifyTwohanded">Fortify Two-handed</string>
     <string name="effect_frenzy">Frenzy</string>
     <string name="effect_invisibility">Invisibility</string>
-    <string name="effect_lingeringDamageHealth">Lingering Damage Health</string>
-    <string name="effect_lingeringDamageMagicka">Lingering Damage Magicka</string>
-    <string name="effect_lingeringDamageStamina">Lingering Damage Stamina</string>
+    <string name="effect_lingeringDamageHealth">Lingering Dmg Health</string>
+    <string name="effect_lingeringDamageMagicka">Lingering Dmg Magicka</string>
+    <string name="effect_lingeringDamageStamina">Lingering Dmg Stamina</string>
     <string name="effect_paralysis">Paralysis</string>
     <string name="effect_ravageHealth">Ravage Health</string>
     <string name="effect_ravageMagicka">Ravage Magicka</string>

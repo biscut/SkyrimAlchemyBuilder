@@ -7,25 +7,171 @@
     tools:context=".ui.byIngredient.ByIngredientFragment">
 
     <LinearLayout
-        android:id="@+id/addedIngredients"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@color/background"
         app:layout_constraintTop_toTopOf="parent">
-
-
-
-        <TextView
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:id="@+id/addedIngredients"
             android:layout_width="match_parent"
-            android:text="testing"
-            android:textColor="#000000" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/ing1_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@mipmap/ingredient_placeholder">
+                <TextView
+                    android:id="@+id/ing1_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="16sp"
+                    android:textColor="@color/ing_name" />
+                <TextView
+                    android:id="@+id/ing1_effect1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+                <TextView
+                    android:id="@+id/ing1_effect2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+                <TextView
+                    android:id="@+id/ing1_effect3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+                <TextView
+                    android:id="@+id/ing1_effect4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ing2_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@mipmap/ingredient_placeholder">
+
+                <TextView
+                    android:id="@+id/ing2_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="16sp"
+                    android:textColor="@color/ing_name"/>
+                <TextView
+                    android:id="@+id/ing2_effect1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+                <TextView
+                    android:id="@+id/ing2_effect2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+                <TextView
+                    android:id="@+id/ing2_effect3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+                <TextView
+                    android:id="@+id/ing2_effect4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ing3_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@mipmap/ingredient_placeholder">
+
+                <TextView
+                    android:id="@+id/ing3_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="16sp"
+                    android:textColor="@color/ing_name"/>
+                <TextView
+                    android:id="@+id/ing3_effect1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+                <TextView
+                    android:id="@+id/ing3_effect2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+                <TextView
+                    android:id="@+id/ing3_effect3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+                <TextView
+                    android:id="@+id/ing3_effect4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|fill_horizontal"
+                    android:textSize="14sp"
+                    android:textColor="@color/ing_effect" />
+            </LinearLayout>
+        </LinearLayout>
 
 
     <ListView
         android:id="@+id/ingredientListView"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
         app:layout_constraintTop_toBottomOf="@id/addedIngredients" />
 
     </LinearLayout>
