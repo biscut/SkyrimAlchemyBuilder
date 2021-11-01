@@ -2,7 +2,9 @@ package com.psyrian.skyrimalchemybuilder;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -27,15 +29,22 @@ public class MainActivity extends AppCompatActivity
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-    public List<cIngredient> ingredientList;
+    private static Context mContext;
+    private static List<cIngredient> ingredientList;
+
+    public static Context getContext()
+    {
+        return mContext;
+    }
+    public static List<cIngredient> getIngredients() { return ingredientList; }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        mContext = getApplicationContext();
         ingredientList = new ArrayList<cIngredient>();
         this.initializeIngredients();
-        this.testPotion(ingredientList);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -53,13 +62,6 @@ public class MainActivity extends AppCompatActivity
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-    }
-
-    private void testPotion(List<cIngredient> ingredients)
-    {
-        cPotion test = new cPotion(ingredients);
-        List<Integer> testEffects = test.getEffects();
-        int a = 1;
     }
 
     public String loadJSONFromAsset(Context context)
@@ -102,21 +104,28 @@ public class MainActivity extends AppCompatActivity
 
                     //String effName = jsonEffect.getString("name");
                     int effID = getResources().getIdentifier(jsonEffect.getString("name"), "string", getPackageName());
-                    String effName = getResources().getString(effID);
                     float effVal = (float)jsonEffect.getDouble("modValue");
                     float effMag = (float)jsonEffect.getDouble("modMagnitude");
-                    cEffect curEffect = new cEffect(effID, effName, effVal, effMag);
+                    cEffect curEffect = new cEffect(effID, effVal, effMag);
 
                     newEffects.add(curEffect);
                 }
 
-                cIngredient curIngredient = new cIngredient(ingName, newEffects);
+                cIngredient curIngredient = new cIngredient(ingNameID, ingName, newEffects);
                 ingredientList.add(curIngredient);
                 int b = 0;
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public void onIngredientClick(View v)
+    {
+        cIngredient toAdd = ingredientList.get(v.getId());
+        Log.i("test", toAdd.getName());
+
+
     }
 
     @Override

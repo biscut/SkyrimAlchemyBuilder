@@ -6,23 +6,41 @@ import java.util.List;
 public class cPotion
 {
 
-    private List<cIngredient> ingredients = new ArrayList();
+    private List<cIngredient> ingredients;
+    public static final Integer MAX_INGREDIENTS = 3;
 
+
+    /**
+     * Creates a potion with no initial ingredients
+     */
+    public cPotion()
+    {
+        this.ingredients = new ArrayList();
+    }
 
     /**
      * Creates potion using list of ingredients
      * @param newIngredients = ingredients to populate potion with
      * @return
      */
-    public cPotion(List<cIngredient> newIngredients)
+    public cPotion(List<cIngredient> newIngredients) throws Exception
     {
-        boolean isSuccessful = true;
+        this.ingredients = new ArrayList();
 
-        for(int i = 0; isSuccessful && i < newIngredients.size(); i++)
-            isSuccessful = this.addIngredient(newIngredients.get(i));
+        if(newIngredients.size() > MAX_INGREDIENTS)
+        {
+            throw new Exception("Too many ingredients to initate potion, max " + MAX_INGREDIENTS.toString());
+        }
+        else
+        {
+            boolean isSuccessful = true;
 
-        if(!isSuccessful)
-            this.ingredients = new ArrayList();
+            for (int i = 0; isSuccessful && i < newIngredients.size(); i++)
+                isSuccessful = this.addIngredient(newIngredients.get(i));
+
+            if (!isSuccessful)
+                this.ingredients = new ArrayList();
+        }
     }
 
     public List<cIngredient> getIngredients()
@@ -44,18 +62,37 @@ public class cPotion
     {
         boolean isExisting = false;
 
-        // Check whether ingredient already exists in potion
-        for(int i = 0; !isExisting && i < ingredients.size(); i++)
+        if(ingredients.size() < MAX_INGREDIENTS)
         {
-            if(ingredients.get(i).getName().equals(newIngredient.getName()))
-                isExisting = true;
+            // Check whether ingredient already exists in potion
+            for (int i = 0; !isExisting && i < ingredients.size(); i++)
+            {
+                if (ingredients.get(i).getName().equals(newIngredient.getName()))
+                    isExisting = true;
+            }
+
+            // Adds ingredient if not already
+            if (!isExisting)
+                this.ingredients.add(newIngredient);
         }
 
-        // Adds ingredient if not already
-        if(!isExisting)
-            this.ingredients.add(newIngredient);
-
         return !isExisting;
+    }
+
+    public boolean removeIngredient(cIngredient ingredientToDel)
+    {
+        boolean isRemoved = false;
+
+        for(cIngredient curIngredient : this.ingredients)
+        {
+            if(curIngredient.getName() == ingredientToDel.getName())
+            {
+                this.ingredients.remove(curIngredient);
+                isRemoved = true;
+            }
+        }
+
+        return isRemoved;
     }
 
     /**

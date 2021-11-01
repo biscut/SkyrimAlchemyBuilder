@@ -1,4 +1,5 @@
 package com.psyrian.skyrimalchemybuilder.ui.byIngredient;
+import com.psyrian.skyrimalchemybuilder.MainActivity;
 import com.psyrian.skyrimalchemybuilder.R;
 import com.psyrian.skyrimalchemybuilder.cEffect;
 import com.psyrian.skyrimalchemybuilder.cIngredient;
@@ -19,8 +20,10 @@ public class cIngredientAdapter implements ListAdapter
 {
 	List<cIngredient> arrayList;
 	Context context;
+	ByIngredientFragment caller;
 
-	public cIngredientAdapter(Context context, List<cIngredient> arrayList) {
+	public cIngredientAdapter(Context context, List<cIngredient> arrayList, ByIngredientFragment caller) {
+		this.caller = caller;
 		this.arrayList=arrayList;
 		this.context=context;
 	}
@@ -61,30 +64,31 @@ public class cIngredientAdapter implements ListAdapter
 		if(convertView==null) {
 			LayoutInflater layoutInflater = LayoutInflater.from(context);
 			convertView=layoutInflater.inflate(R.layout.ingredient_item, null);
-			convertView.setOnLongClickListener(new View.OnLongClickListener(){
+
+			/*convertView.setOnLongClickListener(new View.OnLongClickListener(){
 					@Override
 					public boolean onLongClick(View v) {
-						Log.i("ingViewLongClick",ingredientData.getName());
+						Log.i(String.valueOf(v.getId()),ingredientData.getName()
+						);
+
 						return false;
 					}
 				});
-
+*/
+			convertView.setId(ingredientData.getId());
 			Resources res = context.getResources();
 			TextView curText=convertView.findViewById(R.id.item_name);
 			List<cEffect> effects = ingredientData.getEffects();
 			curText.setText(ingredientData.getName());
 			curText = convertView.findViewById(R.id.effect1);
-			//curText.setText(res.getString(ingredientData.getEffects().get(0).getID()));
 			curText.setText(effects.get(0).getName());
 			curText = convertView.findViewById(R.id.effect2);
-			//curText.setText(res.getString(ingredientData.getEffects().get(1).getID()));
 			curText.setText(effects.get(1).getName());
 			curText = convertView.findViewById(R.id.effect3);
-			//curText.setText(res.getString(ingredientData.getEffects().get(2).getID()));
 			curText.setText(effects.get(2).getName());
 			curText = convertView.findViewById(R.id.effect4);
-			//curText.setText(res.getString(ingredientData.getEffects().get(3).getID()));
 			curText.setText(effects.get(3).getName());
+
 		}
 
 		return convertView;

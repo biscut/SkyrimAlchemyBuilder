@@ -1,16 +1,18 @@
 package com.psyrian.skyrimalchemybuilder;
 
+import android.content.Context;
+
+import com.psyrian.skyrimalchemybuilder.MainActivity;
+
 public class cEffect
 {
-    private int id;
-    private String name;
+    private Integer id;
     private float modValue;
     private float modMagnitude;
 
-    public cEffect(int id, String name, float modValue, float modMagnitude)
+    public cEffect(int id, float modValue, float modMagnitude)
     {
         this.id = id;
-        this.name = name;
         this.modValue = modValue;
         this.modMagnitude = modMagnitude;
     }
@@ -18,7 +20,7 @@ public class cEffect
     public int getID() {
         return id;
     }
-    public String getName() { return name; }
+    public String getName() { return MainActivity.getContext().getResources().getString(id); }
     public float getModValue() { return modValue; }
     public float getModMagnitude() {
         return modMagnitude;

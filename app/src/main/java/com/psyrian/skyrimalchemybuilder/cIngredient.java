@@ -5,6 +5,7 @@ import java.util.List;
 
 public class cIngredient
 {
+    private Integer id;
     private String name;
     private List<cEffect> effects;
 
@@ -12,8 +13,9 @@ public class cIngredient
      * @param name = name of ingredient
      * @param effects = array of effects
      */
-    public cIngredient(String name, List<cEffect> effects)
+    public cIngredient(int id, String name, List<cEffect> effects)
     {
+        this.id = id;
         this.name = name;
         this.effects = effects;
     }
@@ -21,7 +23,7 @@ public class cIngredient
     // Getters for values; no setters as values should stay static
     public String getName() { return name; }
     public List<cEffect> getEffects() { return effects; }
-
+    public int getId() { return id; }
 
     /**
      * @param compIngredient = ingredient to compare with this.ingredient
@@ -48,4 +50,5 @@ public class cIngredient
 
         return matches;
     }
+
 }
