@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.List;
@@ -23,6 +24,8 @@ public class cIngredientAdapter implements ListAdapter
 	ByIngredientFragment caller;
 
 	public cIngredientAdapter(Context context, List<cIngredient> arrayList, ByIngredientFragment caller) {
+		//super();
+		//notifyDataSetChanged();
 		this.caller = caller;
 		this.arrayList=arrayList;
 		this.context=context;
@@ -82,12 +85,16 @@ public class cIngredientAdapter implements ListAdapter
 			curText.setText(ingredientData.getName());
 			curText = convertView.findViewById(R.id.effect1);
 			curText.setText(effects.get(0).getName());
+			curText.setTextColor(res.getColor(ByIngredientFragment.getTextColor(effects.get(0))));
 			curText = convertView.findViewById(R.id.effect2);
 			curText.setText(effects.get(1).getName());
+			curText.setTextColor(res.getColor(ByIngredientFragment.getTextColor(effects.get(1))));
 			curText = convertView.findViewById(R.id.effect3);
 			curText.setText(effects.get(2).getName());
+			curText.setTextColor(res.getColor(ByIngredientFragment.getTextColor(effects.get(2))));
 			curText = convertView.findViewById(R.id.effect4);
 			curText.setText(effects.get(3).getName());
+			curText.setTextColor(res.getColor(ByIngredientFragment.getTextColor(effects.get(3))));
 
 		}
 

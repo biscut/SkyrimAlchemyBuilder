@@ -20,6 +20,7 @@ import com.psyrian.skyrimalchemybuilder.cIngredient;
 import com.psyrian.skyrimalchemybuilder.cPotion;
 import com.psyrian.skyrimalchemybuilder.databinding.FragmentByingredientBinding;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ByIngredientFragment extends Fragment implements AdapterView.OnItemLongClickListener
@@ -95,34 +96,64 @@ public class ByIngredientFragment extends Fragment implements AdapterView.OnItem
                 {
                     TextView effect = (TextView) curItemLayout.getChildAt(j+1);
                     effect.setText(effects.get(j).getName());
-                    setTextColor(effects.get(j), effect);
-/*
-                    TextView eff2 = (TextView) curItemLayout.getChildAt(2);
-                    eff2.setText(effects.get(1).getName());
-
-                    TextView eff3 = (TextView) curItemLayout.getChildAt(3);
-                    eff3.setText(effects.get(2).getName());
-
-                    TextView eff4 = (TextView) curItemLayout.getChildAt(4);
-                    eff4.setText(effects.get(3).getName());*/
+                    effect.setTextColor(getResources().getColor(getTextColor(effects.get(j))));
                 }
             }
+
+            refreshFilteredIngredients();
         }
 
         return isAdded;
     }
 
-    private void setTextColor(cEffect effect, TextView view)
+    private void refreshFilteredIngredients()
+    {
+        List<Integer> unusedEffects = potion.getUnusedEffects();
+        List<cIngredient> wholeList = MainActivity.getIngredients();
+        List<cIngredient> newList = new ArrayList();
+        List<Integer> potionIDs = potion.getIngredientIDs();
+
+        for(int k = 0; k < wholeList.size(); k++)
+        {
+            if(!potionIDs.contains(wholeList.get(k).getId()))
+            {
+                boolean found = false;
+                cIngredient curIngredient = wholeList.get(k);
+
+                for (int i = 0; found == false && i < 4; i++)
+                {
+                    List<cEffect> curEffects = curIngredient.getEffects();
+
+                    if (unusedEffects.contains(curEffects.get(i).getID()))
+                    {
+                        newList.add(curIngredient);
+                        found = true;
+                    }
+                }
+            }
+        }
+
+        filteredIngredients = newList;
+        listView.setAdapter(new cIngredientAdapter(this.getContext(), filteredIngredients, this));
+        /*adapter.clear();
+        adapter.addAll(newList);
+        adapter.notifyDataSetChanged();*/
+
+        //adapter.arrayList = newList;
+    }
+
+    public static Integer getTextColor(cEffect effect)
     {
         List<Integer> currentEffects = potion.getEffects();
         List<Integer> unusedEffects = potion.getUnusedEffects();
+        Integer color = R.color.effectBase;
 
-        if(currentEffects.contains(effect.getID()))
-            view.setTextColor(getResources().getColor(android.R.color.holo_blue_bright));
-        else if(unusedEffects.contains(effect.getID()))
-            view.setTextColor(getResources().getColor(android.R.color.holo_green_light));
-        else
-            view.setTextColor(getResources().getColor(android.R.color.primary_text_dark));
+        if (currentEffects.contains(effect.getID()))
+            color = R.color.effectUsed;
+        else if (unusedEffects.contains(effect.getID()))
+            color = R.color.effectPotential;
+
+        return color;
     }
 
     @Override

@@ -171,4 +171,16 @@ public class cPotion
 
         return effects;
     }
+
+    public List<Integer> getIngredientIDs()
+    {
+        List<Integer> ingIDs = new ArrayList();
+
+        for(cIngredient curIngredient : ingredients)
+        {
+            ingIDs.add(curIngredient.getId());
+        }
+
+        return ingIDs;
+    }
 }

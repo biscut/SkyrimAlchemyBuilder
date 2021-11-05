@@ -42,7 +42,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
                 <TextView
                     android:id="@+id/ing1_effect2"
                     android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
                 <TextView
                     android:id="@+id/ing1_effect3"
                     android:layout_width="match_parent"
@@ -58,7 +58,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
                 <TextView
                     android:id="@+id/ing1_effect4"
                     android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/ing2_layout"
@@ -92,7 +92,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
                 <TextView
                     android:id="@+id/ing2_effect2"
                     android:layout_width="match_parent"
@@ -100,7 +100,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
                 <TextView
                     android:id="@+id/ing2_effect3"
                     android:layout_width="match_parent"
@@ -108,7 +108,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
                 <TextView
                     android:id="@+id/ing2_effect4"
                     android:layout_width="match_parent"
@@ -116,7 +116,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/ing3_layout"
@@ -141,7 +141,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
                 <TextView
                     android:id="@+id/ing3_effect2"
                     android:layout_width="match_parent"
@@ -149,7 +149,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
                 <TextView
                     android:id="@+id/ing3_effect3"
                     android:layout_width="match_parent"
@@ -157,7 +157,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
                 <TextView
                     android:id="@+id/ing3_effect4"
                     android:layout_width="match_parent"
@@ -165,7 +165,7 @@
                     android:textAlignment="center"
                     android:gravity="center_horizontal|fill_horizontal"
                     android:textSize="14sp"
-                    android:textColor="@color/ing_effect" />
+                    android:textColor="@color/effectBase" />
             </LinearLayout>
         </LinearLayout>
 

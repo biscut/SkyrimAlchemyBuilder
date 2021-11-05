@@ -10,5 +10,7 @@
     <color name="background">#2C3E23</color>
     <color name="grid_lines">#0B1900</color>
     <color name="ing_name">#C6C600</color>
-    <color name="ing_effect">#808000</color>
+    <color name="effectBase">#808000</color>
+    <color name="effectUsed">#005FAA</color>
+    <color name="effectPotential">#01DA0A</color>
 </resources>
