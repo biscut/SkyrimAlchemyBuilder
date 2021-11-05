@@ -1,6 +1,7 @@
 package com.psyrian.skyrimalchemybuilder.ui.byIngredient;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,7 @@ import com.psyrian.skyrimalchemybuilder.databinding.FragmentByingredientBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ByIngredientFragment extends Fragment implements AdapterView.OnItemLongClickListener
+public class ByIngredientFragment extends Fragment implements AdapterView.OnItemLongClickListener, View.OnLongClickListener
 {
 
     private ByIngredientViewModel byIngredientViewModel;
@@ -32,6 +33,7 @@ public class ByIngredientFragment extends Fragment implements AdapterView.OnItem
     private List<cIngredient> filteredIngredients;
     private cIngredientAdapter adapter;
     ListView listView;
+    LinearLayout potionView;
     TextView textView;
     String[] listItem;
 
@@ -48,7 +50,9 @@ public class ByIngredientFragment extends Fragment implements AdapterView.OnItem
         adapter = new cIngredientAdapter(this.getContext(), filteredIngredients, this);
 
         listView = (ListView)root.findViewById(R.id.ingredientListView);
+        potionView = (LinearLayout)root.findViewById(R.id.addedIngredients);
         listView.setOnItemLongClickListener(this);
+        potionView.setOnLongClickListener(this);
         listView.setAdapter(adapter);
 
         return root;
@@ -61,49 +65,93 @@ public class ByIngredientFragment extends Fragment implements AdapterView.OnItem
 
         if(isAdded)
         {
-            LinearLayout curItemLayout = null;
-
-            for(int i = 0; i < potion.getIngredients().size(); i++)
-            {
-
-                cIngredient curIngredient = potion.getIngredients().get(i);
-                List<cEffect> effects = curIngredient.getEffects();
-
-                switch(i)
-                {
-                    case 0:
-
-                        curItemLayout = binding.ing1Layout;
-                        break;
-                    case 1:
-
-                        curItemLayout = binding.ing2Layout;
-                        break;
-                    case 2:
-
-                        curItemLayout = binding.ing3Layout;
-                        break;
-                    default:
-                        break;
-                }
-
-                curItemLayout.setBackground(getResources().getDrawable(R.mipmap.ingredient_background));
-                TextView name = (TextView)curItemLayout.getChildAt(0);
-                name.setText(curIngredient.getName());
-
-
-                for(int j = 0; j < 4; j++)
-                {
-                    TextView effect = (TextView) curItemLayout.getChildAt(j+1);
-                    effect.setText(effects.get(j).getName());
-                    effect.setTextColor(getResources().getColor(getTextColor(effects.get(j))));
-                }
-            }
-
+            updatePotionView();
             refreshFilteredIngredients();
         }
 
         return isAdded;
+    }
+
+    public boolean removeIngredient(cIngredient expelIngredient)
+    {
+        boolean removed = false;
+
+        removed = potion.removeIngredient(expelIngredient);
+
+        if(removed)
+        {
+            updatePotionView();
+            refreshFilteredIngredients();
+        }
+
+
+        return removed;
+    }
+
+    private void updatePotionView()
+    {
+        LinearLayout curItemLayout = null;
+
+        for(int i = 0; i < cPotion.MAX_INGREDIENTS; i++)
+        {
+            boolean emptyCell = false;
+            cIngredient curIngredient = null;
+            List<cEffect> effects = null;
+
+            if(i >= potion.getIngredients().size())
+                emptyCell = true;
+
+            switch(i)
+            {
+                case 0:
+
+                    curItemLayout = binding.ing1Layout;
+                    break;
+                case 1:
+
+                    curItemLayout = binding.ing2Layout;
+                    break;
+                case 2:
+
+                    curItemLayout = binding.ing3Layout;
+                    break;
+                default:
+                    break;
+            }
+
+            if (!emptyCell)
+            {
+                curIngredient = potion.getIngredients().get(i);
+                effects = curIngredient.getEffects();
+            }
+
+            if(emptyCell)
+                curItemLayout.setBackground(getResources().getDrawable(R.mipmap.ingredient_placeholder));
+            else
+                curItemLayout.setBackground(getResources().getDrawable(R.mipmap.ingredient_background));
+            TextView name = (TextView)curItemLayout.getChildAt(0);
+
+            if(emptyCell)
+                name.setText("");
+            else
+                name.setText(curIngredient.getName());
+
+
+            for(int j = 0; j < 4; j++)
+            {
+                TextView effect = (TextView) curItemLayout.getChildAt(j+1);
+
+                if(emptyCell)
+                    effect.setText("");
+                else
+                    effect.setText(effects.get(j).getName());
+
+                if(!emptyCell)
+                    effect.setTextColor(getResources().getColor(getTextColor(effects.get(j))));
+            }
+        }
+
+        refreshFilteredIngredients();
     }
 
     private void refreshFilteredIngredients()
@@ -113,33 +161,34 @@ public class ByIngredientFragment extends Fragment implements AdapterView.OnItem
         List<cIngredient> newList = new ArrayList();
         List<Integer> potionIDs = potion.getIngredientIDs();
 
-        for(int k = 0; k < wholeList.size(); k++)
+        if(potion.getIngredients().size() > 0)
         {
-            if(!potionIDs.contains(wholeList.get(k).getId()))
+            for (int k = 0; k < wholeList.size(); k++)
             {
-                boolean found = false;
-                cIngredient curIngredient = wholeList.get(k);
-
-                for (int i = 0; found == false && i < 4; i++)
+                if (!potionIDs.contains(wholeList.get(k).getId()))
                 {
-                    List<cEffect> curEffects = curIngredient.getEffects();
+                    boolean found = false;
+                    cIngredient curIngredient = wholeList.get(k);
 
-                    if (unusedEffects.contains(curEffects.get(i).getID()))
+                    for (int i = 0; found == false && i < 4; i++)
                     {
-                        newList.add(curIngredient);
-                        found = true;
+                        List<cEffect> curEffects = curIngredient.getEffects();
+
+                        if (unusedEffects.contains(curEffects.get(i).getID()))
+                        {
+                            newList.add(curIngredient);
+                            found = true;
+                        }
                     }
                 }
             }
+
+            filteredIngredients = newList;
         }
+        else
+            filteredIngredients = wholeList;
 
-        filteredIngredients = newList;
         listView.setAdapter(new cIngredientAdapter(this.getContext(), filteredIngredients, this));
-        /*adapter.clear();
-        adapter.addAll(newList);
-        adapter.notifyDataSetChanged();*/
-
-        //adapter.arrayList = newList;
     }
 
     public static Integer getTextColor(cEffect effect)
@@ -165,8 +214,16 @@ public class ByIngredientFragment extends Fragment implements AdapterView.OnItem
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id)
     {
+        Log.i("longItemClick", String.valueOf(view.getId()));
         addIngredient(filteredIngredients.get(position));
 
+        return false;
+    }
+
+    @Override
+    public boolean onLongClick(View v)
+    {
+        removeIngredient(potion.getIngredients().get(potion.getIngredients().size()-1));
         return false;
     }
 }
