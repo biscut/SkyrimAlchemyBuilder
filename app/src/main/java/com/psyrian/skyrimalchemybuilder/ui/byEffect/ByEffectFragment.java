@@ -6,18 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.psyrian.skyrimalchemybuilder.R;
 import com.psyrian.skyrimalchemybuilder.databinding.FragmentByeffectBinding;
-import com.psyrian.skyrimalchemybuilder.databinding.FragmentByingredientBinding;
-import com.psyrian.skyrimalchemybuilder.ui.byIngredient.ByIngredientViewModel;
 
 public class ByEffectFragment extends Fragment {
 
@@ -38,7 +33,7 @@ public class ByEffectFragment extends Fragment {
         ArrayAdapter adapter = new ArrayAdapter<String>(this.getContext(),
                 android.R.layout.simple_list_item_1, android.R.id.text1,
                 effectNameList);
-        listView = (ListView)root.findViewById(R.id.effectListView);
+        listView = (ListView)root.findViewById(R.id.byEffectListView);
         listView.setAdapter(adapter);
 
         return root;

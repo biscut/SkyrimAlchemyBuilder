@@ -4,11 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.byEffect.ByEffectFragment">
 
-    <ListView
-        android:id="@+id/effectListView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Effects"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|fill_horizontal"
+            android:textSize="16sp"
+            android:textColor="@color/ing_name"/>
+        <TextView
+            android:id="@+id/byEffectFirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|fill_horizontal"
+            android:textSize="16sp"
+            android:textColor="@color/ing_name"
+            android:hint="First Effect" />
+        <TextView
+            android:id="@+id/byEffectSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|fill_horizontal"
+            android:textSize="16sp"
+            android:textColor="@color/ing_name"
+            android:hint="Second Effect" />
+        <TextView
+            android:id="@+id/byEffectThird"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|fill_horizontal"
+            android:textSize="16sp"
+            android:textColor="@color/ing_name"
+            android:hint="Third Effect" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Possible Potions"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|fill_horizontal"
+            android:textSize="16sp"
+            android:textColor="@color/ing_name" />
+        <ListView
+            android:id="@+id/byEffectListView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

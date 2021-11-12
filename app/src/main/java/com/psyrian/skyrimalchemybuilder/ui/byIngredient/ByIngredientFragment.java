@@ -47,11 +47,14 @@ public class ByIngredientFragment extends Fragment implements AdapterView.OnItem
         this.binding = FragmentByingredientBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+
         adapter = new cIngredientAdapter(this.getContext(), filteredIngredients, this);
 
         listView = (ListView)root.findViewById(R.id.ingredientListView);
         potionView = (LinearLayout)root.findViewById(R.id.addedIngredients);
+        TextView emptyText = root.findViewById(R.id.ingredientEmptyText);
         listView.setOnItemLongClickListener(this);
+        listView.setEmptyView(emptyText);
         potionView.setOnLongClickListener(this);
         listView.setAdapter(adapter);
 
